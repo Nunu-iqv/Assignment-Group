@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Submit Review</title>
+<link rel="stylesheet" href="style.css">
+<script src="java.js"></script>
+</head>
+<body>
+<header>
+<h1 class="logo">MovieSphere</h1>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="review.html">Reviews</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="submit.html">Submit Review</a>
+    <a href="about.html">About</a>
+</nav>
+</header>
+
+<h2 class="title">Submit Your Review</h2>
+
+<form onsubmit="return validateForm()">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="text" placeholder="Movie Title" required>
+    <select required>
+        <option value="">Select Rating</option>
+        <option value="5">⭐⭐⭐⭐⭐ (5 Stars)</option>
+        <option value="4">⭐⭐⭐⭐ (4 Stars)</option>
+        <option value="3">⭐⭐⭐ (3 Stars)</option>
+        <option value="2">⭐⭐ (2 Stars)</option>
+        <option value="1">⭐ (1 Star)</option>
+    </select>
+    <textarea placeholder="Your Review..." rows="5" required></textarea>
+    <button type="submit">Submit Review</button>
+</form>
+
+<footer>
+<p>© 2026 MovieSphere</p>
+</footer>
+</body>
+</html>

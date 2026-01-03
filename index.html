@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Movie Review Website">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MovieSphere - Your IMDb-like Movie Hub</title>
+<link rel="stylesheet" href="style.css">
+<script src="java.js" defer></script>
+</head>
+
+<body>
+<!-- IMDb-like Top Bar -->
+<header>
+    <div class="top-bar">
+        <a href="index.html" class="logo">PopCorn </a>
+        <div class="right-section">
+            <a href="#" class="imdb-pro">PopCorn</a>
+            <span class="language-selector">English (United States)</span>
+        </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    <nav class="main-nav">
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Movies ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#releases">New Releases</a>
+                <a href="#top-rated">Top Rated</a>
+                <a href="movies.html">Browse All</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                TV Shows ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#tv-popular">Popular</a>
+                <a href="#tv-top">Top Rated</a>
+                <a href="#tv-schedule">TV Schedule</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Watch ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#what-to-watch">What to Watch</a>
+                <a href="#trailers">Trailers</a>
+                <a href="#streaming">Streaming Guide</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Awards & Events ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#oscars">Oscars</a>
+                <a href="#emmys">Emmys</a>
+                <a href="#festivals">Festivals</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Celebs ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#born-today">Born Today</a>
+                <a href="#most-popular">Most Popular</a>
+                <a href="#celebrity-news">News</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Community ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#forums">Forums</a>
+                <a href="#help-center">Help Center</a>
+                <a href="#contributor-zone">Contributor Zone</a>
+            </div>
+        </div>
+        
+        <a href="#reviews" class="dropdown-btn">Reviews</a>
+        <a href="#ranking" class="dropdown-btn">Ranking</a>
+        <a href="#submit" class="dropdown-btn">Submit Review</a>
+        <a href="about.html" class="dropdown-btn">About</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Welcome to MovieSphere 🎬</h2>
+    <p>Your trusted IMDb-like platform for honest movie reviews and ratings.</p>
+    <button onclick="changeTheme()">🌙 Dark / ☀️ Light Mode</button>
+    <br>
+    <a class="btn" href="movies.html">Browse Movies</a>
+</section>
+
+<!-- Reviews Section -->
+<section id="reviews" class="section">
+    <h2 class="title">Featured Reviews</h2>
+    
+    <div class="review-box">
+        <img src="images/shawshank.jpg" alt="The Shawshank Redemption">
+        <div>
+            <h2>The Shawshank Redemption</h2>
+            <p>⭐ ⭐ ⭐ ⭐ ⭐ (5/5) | 1994 | R | 2h 22min</p>
+            <p>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</p>
+            <p><strong>Director:</strong> Frank Darabont</p>
+            <p><strong>Stars:</strong> Tim Robbins, Morgan Freeman, Bob Gunton</p>
+            <a class="btn" href="movies.html">View Full Details</a>
+        </div>
+    </div>
+    
+    <h3>Watch Official Trailer</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6hB3S9bIaco" 
+            title="The Shawshank Redemption Trailer" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+</section>
+
+<!-- Ranking Section -->
+<section id="ranking" class="section">
+    <h2 class="title">Top 10 Movies of All Time</h2>
+
+    <table>
+    <tr>
+        <th>Rank</th>
+        <th>Movie</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th>Votes</th>
+    </tr>
+    
+    <tr>
+        <td>1</td>
+        <td>The Shawshank Redemption</td>
+        <td>Drama</td>
+        <td>1994</td>
+        <td>⭐⭐⭐⭐⭐</td>
+        <td>2.8M</td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>The Godfather</td>
+        <td>Crime, Drama</td>
+        <td>1972</td>
+        <td>⭐⭐⭐⭐⭐</td>
+        <td>1.9M</td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>The Dark Knight</td>
+        <td>Action, Crime</td>
+        <td>2008</td>
+        <td>⭐⭐⭐⭐⭐</td>
+        <td>2.7M</td>
+    </tr>
+    
+    <tr>
+        <td>4</td>
+        <td>The Godfather Part II</td>
+        <td>Crime, Drama</td>
+        <td>1974</td>
+        <td>⭐⭐⭐⭐⭐</td>
+        <td>1.3M</td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td>12 Angry Men</td>
+        <td>Crime, Drama</td>
+        <td>1957</td>
+        <td>⭐⭐⭐⭐⭐</td>
+        <td>836K</td>
+    </tr>
+    </table>
+</section>
+
+<!-- Submit Review Section -->
+<section id="submit" class="section">
+    <h2 class="title">Submit Your Review</h2>
+    <p>Share your thoughts on movies you've watched!</p>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Movie Title" required>
+        <select required>
+            <option value="">Select Rating</option>
+            <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
+            <option value="4">⭐⭐⭐⭐ (Very Good)</option>
+            <option value="3">⭐⭐⭐ (Good)</option>
+            <option value="2">⭐⭐ (Fair)</option>
+            <option value="1">⭐ (Poor)</option>
+        </select>
+        <textarea placeholder="Write your review here... (Minimum 50 characters)" 
+                  rows="6" 
+                  minlength="50" 
+                  required></textarea>
+        <button type="submit">Submit Review</button>
+    </form>
+</section>
+
+<footer>
+    <p>Contact us: <a href="mailto:contact@moviesphere.com">contact@moviesphere.com</a></p>
+    <p>Follow us: 
+        <a href="#">Twitter</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="#">Instagram</a>
+    </p>
+    <p>© 2026 MovieSphere. All movie data is for educational purposes.</p>
+    <p>This site is inspired by IMDb but created for educational use.</p>
+</footer>
+</body>
+</html>

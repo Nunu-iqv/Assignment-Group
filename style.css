@@ -1,0 +1,312 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #111;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+    background: #f5f5f5;
+    color: #333;
+}
+
+body.light header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+body.light .logo {
+    background: #f5c518;
+    color: #000;
+}
+
+/* IMDb-like Header */
+header {
+    background: #121212;
+    padding: 0;
+    border-bottom: 2px solid #f5c518;
+}
+
+.top-bar {
+    background: #000;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    color: #f5c518;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 5px 10px;
+    background: #000;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.imdb-pro {
+    color: #00a8ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.language-selector {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    padding: 0 20px;
+    background: #121212;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-btn:hover {
+    background: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #121212;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1000;
+    border: 1px solid #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #333;
+}
+
+.dropdown-content a:hover {
+    background: #333;
+    color: #f5c518;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #f5c518;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
+    background-size: cover;
+}
+
+.btn {
+    background: #f5c518;
+    padding: 12px 24px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Movie Grid */
+.movie-grid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    transition: transform 0.3s;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #f5c518;
+}
+
+/* Review Box */
+.review-box {
+    display: flex;
+    gap: 30px;
+    margin: 40px;
+    padding: 30px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    align-items: center;
+    border-left: 5px solid #f5c518;
+}
+
+.review-box img {
+    width: 180px;
+    height: 270px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Table */
+table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background: #1a1a1a;
+}
+
+table th {
+    background: #f5c518;
+    color: #000;
+    padding: 15px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+/* Form */
+form {
+    width: 50%;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: #222;
+    color: white;
+}
+
+button[type="submit"] {
+    background: #f5c518;
+    color: #000;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    margin-top: 60px;
+    border-top: 2px solid #f5c518;
+}
+
+footer a {
+    color: #f5c518;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #121212;
+        z-index: 1000;
+    }
+    
+    .main-nav.active {
+        display: flex;
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+        background: #000;
+    }
+    
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    .review-box {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px;
+    }
+    
+    .movie-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 80%;
+    }
+    
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
