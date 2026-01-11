@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Review | Detail Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <a href="index.html" class="logo">
+        <img src="logotransparents.png" alt="logo"> PopCorn</a>
+        <div class="right-section">
+            <a href="#" class="imdb-pro">PopCorn</a>
+            <span class="language-selector">English (United States)</span>
+        </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    <nav class="main-nav">
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Movies ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#releases">New Releases</a>
+                <a href="#top-rated">Top Rated</a>
+                <a href="movies.html">Browse All</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                TV Shows ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#tv-popular">Popular</a>
+                <a href="#tv-top">Top Rated</a>
+                <a href="#tv-schedule">TV Schedule</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Watch ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#what-to-watch">What to Watch</a>
+                <a href="#trailers">Trailers</a>
+                <a href="#streaming">Streaming Guide</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Awards & Events ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#oscars">Oscars</a>
+                <a href="#emmys">Emmys</a>
+                <a href="#festivals">Festivals</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Celebs ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#born-today">Born Today</a>
+                <a href="#most-popular">Most Popular</a>
+                <a href="#celebrity-news">News</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Community ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#forums">Forums</a>
+                <a href="#help-center">Help Center</a>
+                <a href="#contributor-zone">Contributor Zone</a>
+            </div>
+        </div>
+        
+        <a href="#reviews" class="dropdown-btn">Reviews</a>
+        <a href="#ranking" class="dropdown-btn">Ranking</a>
+        <a href="#submit" class="dropdown-btn">Submit Review</a>
+        <a href="about.html" class="dropdown-btn">About</a>
+    </nav>
+</header>
+
+
+<!-- ===== MOVIE TITLE ===== -->
+<section style="text-align:center; padding:40px 20px;">
+    <h1 style="color:#f5c518; font-size:35px; margin-bottom:10px;">
+        Elemental
+    </h1>
+    <p style="color:#aaa;">
+        2023 • Animation/Romance •  1h 49m
+    </p>
+</section>
+
+
+<!-- ===== TRAILER ===== -->
+<div style="display:flex; justify-content:center;">
+    <iframe width="900" height="400"
+        src="https://youtu.be/hXzcyx9V0xw?si=KluIiXNQx9sVc_ss"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+
+<!-- ===== MOVIE IMAGES GALLERY ===== -->
+<section style="display:flex; justify-content:center; gap:20px; padding:40px;">
+    <img src="Elemental1.jpg" width="300" height="180" style="border-radius:8px;">
+    <img src="Elemental2.jpg" width="300" height="180" style="border-radius:8px;">
+    <img src="Elemental3.jpg" width="300" height="180" style="border-radius:8px;">
+</section>
+
+
+<!-- ===== RATING ===== -->
+<section style="text-align:center;">
+    <h2>⭐ 4.0 / 5</h2>
+    <p>Based on 207 reviews</p>
+</section>
+
+
+<!-- ===== DESCRIPTION BOX ===== -->
+<section class="review-box">
+    <img src="Elementalposter.jpg">
+    <div>
+        <h2>Description</h2>
+        <p>
+            Elemental (2023) is a heartwarming animated movie set in Element City, where people of fire, water, air, and earth live together. 
+            The story follows Ember, a strong and passionate fire girl, and Wade, a kind and emotional water boy, who come from very different 
+            worlds. When they meet, they slowly learn to understand each other and discover that even opposites can connect. Through their journey, the 
+            movie talks about love, family, and accepting differences in a beautiful and meaningful way.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===== USER REVIEWS LIST ===== -->
+<h2 style="text-align:center;">Audience Reviews</h2>
+
+<div class="review-list">
+
+    <div class="review-card">
+        <div class="review-header">
+            <span class="review-name">Cassandra234</span>
+            <span class="review-stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p class="review-text">
+            Emotional tau tengok cita cam nie, TAPI SUMPAH BEST!!
+        </p>
+    </div>
+
+    <div class="review-card">
+        <div class="review-header">
+            <span class="review-name">MadMelon</span>
+            <span class="review-stars">⭐⭐⭐⭐</span>
+        </div>
+        <p class="review-text">
+            Kinda boring at first but u gotta got it once you watch it more!!
+        </p>
+    </div>
+
+</div>
+
+<div class="review-card">
+        <div class="review-header">
+            <span class="review-name">AhmadKentot</span>
+            <span class="review-stars">⭐⭐⭐</span>
+        </div>
+        <p class="review-text">
+            Dont really romance but the graphic are just superb!!
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ===== SUBMIT REVIEW FORM ===== -->
+<h2 style="text-align:center;">Submit Your Review</h2>
+
+<form>
+    <input type="text" placeholder="Your Name" required>
+
+    <select required>
+        <option value="">Rate This Movie</option>
+        <option>⭐</option>
+        <option>⭐⭐</option>
+        <option>⭐⭐⭐</option>
+        <option>⭐⭐⭐⭐</option>
+        <option>⭐⭐⭐⭐⭐</option>
+    </select>
+
+    <textarea rows="6" placeholder="Write your review..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+</form>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>© 2026 MyMovie Review</p>
+    <a href="#">Back to Home</a>
+</footer>
+
+</body>
+</html>
+
+</html>
