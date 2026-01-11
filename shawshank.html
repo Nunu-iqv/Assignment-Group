@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The Shawshank Redemption - PopCorn Movie Details">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shawshank Redemption - PopCorn</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    <nav class="main-nav">
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Movies ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#releases">New Releases</a>
+                <a href="#top-rated">Top Rated</a>
+                <a href="movies.html">Browse All</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                TV Shows ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#tv-popular">Popular</a>
+                <a href="#tv-top">Top Rated</a>
+                <a href="#tv-schedule">TV Schedule</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Watch ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#what-to-watch">What to Watch</a>
+                <a href="#trailers">Trailers</a>
+                <a href="#streaming">Streaming Guide</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Awards & Events ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#oscars">Oscars</a>
+                <a href="#emmys">Emmys</a>
+                <a href="#festivals">Festivals</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Celebs ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#born-today">Born Today</a>
+                <a href="#most-popular">Most Popular</a>
+                <a href="#celebrity-news">News</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                Community ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="#forums">Forums</a>
+                <a href="#help-center">Help Center</a>
+                <a href="#contributor-zone">Contributor Zone</a>
+            </div>
+        </div>
+        
+        <a href="#reviews" class="dropdown-btn">Reviews</a>
+        <a href="#ranking" class="dropdown-btn">Ranking</a>
+        <a href="#submit" class="dropdown-btn">Submit Review</a>
+        <a href="about.html" class="dropdown-btn">About</a>
+    </nav>
+</header>
+
+<main>
+    <section class="review-box" style="border-left: 5px solid #f5c518; margin-top: 40px;">
+        <img src="images/Shawnshank.jpg" alt="The Shawshank Redemption">
+        <div>
+            <h1 style="margin:0; font-size: 2.5rem;">The Shawshank Redemption (1994)</h1>
+            <p style="color: #f5c518; font-weight: bold; font-size: 1.2rem;">⭐ 9.3/10 | R | 2h 22min</p>
+            <p style="color: #f5c518; font-weight: bold; font-size: 1.2rem;">Genre : Thriller/Crime</p>
+            <p style="color: #f5c518; font-weight: bold; font-size: 1.2rem;">Release Date : 23 September 1994</p>
+            <p><em>"Fear can hold you prisoner. Hope can set you free."</em></p>
+            
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="btn" onclick="openTrailerModal()">▶ Watch Trailer</button>
+                <button id="watchlist-btn" class="btn" style="background: #333; color: white; border: 1px solid #f5c518;" onclick="toggleLocalWatchlist()">+ Add to Watchlist</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section" style="width: 80%; margin: auto;">
+        <div class="menu-bar" style="background: #1a1a1a; justify-content: flex-start; gap: 10px; padding: 0 10px; border-radius: 8px 8px 0 0;">
+            <button class="tab-btn active" onclick="switchTab(event, 'Story')" style="background:none; border:none; color:white; padding: 15px; cursor:pointer; font-weight:bold; border-bottom: 3px solid #f5c518;">Synopsis</button>
+            <button class="tab-btn" onclick="switchTab(event, 'Cast')" style="background:none; border:none; color:white; padding: 15px; cursor:pointer;">Cast</button>
+        </div>
+
+        <div id="Story" class="tab-content" style="background: #1a1a1a; padding: 25px; border-radius: 0 0 8px 8px;">
+            <p class="review-text">Andy Dufresne, a quiet and intelligent banker, is sentenced to life in Shawshank State Prison for a crime he insists he did not commit. 
+                Inside the brutal prison walls, he forms an unlikely friendship with fellow inmate Red. Over the years, Andy uses his resilience, hope and determination to survive imprisonment, ultimately showing how hope can be a powerful force even in the darkest places.</p>
+        </div>
+
+        <div id="Cast" class="tab-content" style="display:none; background: #1a1a1a; padding: 25px; border-radius: 0 0 8px 8px;">
+            <div class="movie-grid" style="justify-content: flex-start; gap: 15px;">
+                <div class="card" style="width: 150px;"><strong>Tim Robbins</strong><p style="font-size:12px;">as Andy Dufresne</p></div>
+                <div class="card" style="width: 150px;"><strong>Morgan Freeman</strong><p style="font-size:12px;">as Ellis “Red” Redding</p></div>
+                <div class="card" style="width: 150px;"><strong>Bob Gunton</strong><p style="font-size:12px;">as Warden Norton</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="trailerModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center;">
+    <div style="width: 80%; max-width: 800px; position:relative;">
+        <button onclick="closeTrailerModal()" style="position:absolute; top:-40px; right:0; background:none; border:none; color:white; font-size:30px; cursor:pointer;">&times; Close</button>
+        <iframe id="trailerFrame" width="100%" height="450" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 MovieSphere | Inspired by IMDb</p>
+</footer>
+
